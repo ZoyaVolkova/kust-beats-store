@@ -3,12 +3,12 @@
     <div class="header__container _container">
       <div class="header__body">
         <div class="header__main">
-          <a href="" class="header__logo">KUST</a>
+          <a href="index.html" class="header__logo">KUST</a>
           <div class="header__menu menu">
             <nav class="menu__body">
               <ul data-spollers="768,max" class="menu__list">
                 <li class="menu__item">
-                  <a href="" class="menu__link">Licensing</a>
+                  <a href="#info" class="menu__link to-info">Licensing</a>
                   <button
                     data-spoller
                     type="button"
@@ -16,44 +16,39 @@
                   ></button>
                   <ul class="menu__sub-list">
                     <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">MP3 Lease</a>
+                      <a href="#info" class="menu__sub-link to-info"
+                        >MP3 Lease</a
+                      >
                     </li>
                     <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">WAV Lease</a>
+                      <a href="#info" class="menu__sub-link to-info"
+                        >WAV Lease</a
+                      >
                     </li>
                     <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">Trackout Lease</a>
+                      <a href="#info" class="menu__sub-link to-info"
+                        >Trackout Lease</a
+                      >
                     </li>
                     <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">Unlimited Lease</a>
-                      <a href="" class="menu__sub-link">Exclusive</a>
+                      <a href="#info" class="menu__sub-link to-info"
+                        >Unlimited Lease</a
+                      >
+                    </li>
+                    <li class="menu__sub-item">
+                      <a href="#info" class="menu__sub-link to-info"
+                        >Exclusive</a
+                      >
                     </li>
                   </ul>
                 </li>
                 <li class="menu__item">
-                  <a href="" class="menu__link">Rooms</a>
-                  <button
-                    data-spoller
-                    type="button"
-                    class="menu__arrow _icon-arrow-down"
-                  ></button>
-                  <ul class="menu__sub-list">
-                    <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">Room #1</a>
-                    </li>
-                    <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">Room #2</a>
-                    </li>
-                    <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">Room #3</a>
-                    </li>
-                    <li class="menu__sub-item">
-                      <a href="" class="menu__sub-link">Room #4</a>
-                    </li>
-                  </ul>
+                  <a href="#" class="menu__link to-cart">Cart</a>
                 </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">About</a>
+                <li class="menu__item item-search">
+                  <a href="#search-form" class="menu__link find-beat"
+                    >Find your beat!</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -76,45 +71,57 @@
                 name="form[]"
                 data-value="What type of beat are you looking for?"
                 class="search-form__input"
+                id="search-form"
               />
             </form>
           </div>
         </div>
-        <div class="header__actions actions-header">
+        <div class="header__social social-links">
           <a
-            href=""
-            class="actions-header__item actions-header__item_user _ibg"
+            href="popup-email"
+            class="social-links__item social-links__item_user _ibg _popup-link"
           >
             <img src="img/icons/mail.svg" alt="Avatar" />
           </a>
           <a
-            href=""
-            class="actions-header__item actions-header__item_user _ibg"
+            href="https://soundcloud.com/og_kust"
+            target="_blank"
+            class="social-links__item social-links__item_user _ibg"
           >
             <img src="img/icons/soundcloud.svg" alt="Avatar" />
           </a>
           <a
-            href=""
-            class="actions-header__item actions-header__item_user _ibg"
+            href="https://vk.com/ogkustonthablock"
+            target="_blank"
+            class="social-links__item social-links__item_user _ibg"
           >
             <img src="img/icons/vk.svg" alt="Avatar" />
           </a>
           <a
-            href=""
-            class="actions-header__item actions-header__item_user _ibg"
+            href="https://www.instagram.com/og_kustik"
+            target="_blank"
+            class="social-links__item social-links__item_user _ibg"
           >
             <img src="img/icons/instagram.svg" alt="Avatar" />
           </a>
           <a
-            href=""
-            class="actions-header__item actions-header__item_user _ibg"
+            href="https://www.youtube.com/channel/UCnI0l4QhBI2I7sk2VHWzu2Q"
+            target="_blank"
+            class="social-links__item social-links__item_user _ibg"
           >
             <img src="img/icons/youtube.svg" alt="Avatar" />
           </a>
-          <div class="actions-header__item cart-header">
-            <a href="" class="cart-header__icon _icon-cart"> </a>
+          <div class="social-links__item cart-header">
+            <a href="" class="cart-header__icon _icon-cart"><span>0</span></a>
             <div class="cart-header__body">
               <ul class="cart-header__list cart-list"></ul>
+              <div class="total-amount">Total amount: <span>$00.00</span></div>
+              <a href="#" class="to-cart checkout _icon-arrow-down"
+                ><p>Proceed to checkout</p>
+              </a>
+              <a href="#" class="shopping _icon-cart"
+                ><p>Continue shopping</p>
+              </a>
             </div>
           </div>
         </div>

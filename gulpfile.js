@@ -8,14 +8,13 @@ let scss = require('gulp-sass')(require('sass'))
 let group_media = require('gulp-group-css-media-queries')
 let plumber = require('gulp-plumber')
 let del = require('del')
-let imagemin = require('gulp-imagemin')
+
 let uglify = require('gulp-uglify-es').default
 let rename = require('gulp-rename')
 let fileinclude = require('gulp-file-include')
 let clean_css = require('gulp-clean-css')
 let newer = require('gulp-newer')
 
-let webp = require('imagemin-webp')
 let webpcss = require('gulp-webpcss')
 let webphtml = require('gulp-webp-html')
 
@@ -36,7 +35,6 @@ let path = {
     fonts: project_name + '/fonts/',
     json: project_name + '/json/',
     audio: project_name + '/audio/',
-    phpmailer: project_name + '/phpmailer/',
   },
   src: {
     favicon: src_folder + '/img/favicon.{jpg,png,svg,gif,ico,webp}',
@@ -50,7 +48,6 @@ let path = {
     fonts: src_folder + '/fonts/*.ttf',
     json: src_folder + '/json/*.*',
     audio: src_folder + '/audio/*.*',
-    phpmailer: src_folder + '/phpmailer/**',
   },
   watch: {
     html: src_folder + '/**/*.html',
@@ -59,7 +56,6 @@ let path = {
     images: src_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
     json: src_folder + '/json/*.*',
     audio: src_folder + '/audio/*.*',
-    phpmailer: src_folder + '/phpmailer/**',
   },
   clean: './' + project_name + '/',
 }
@@ -78,11 +74,7 @@ function json() {
 function audio() {
   return src(path.src.audio).pipe(plumber()).pipe(dest(path.build.audio))
 }
-function phpmailer() {
-  return src(path.src.phpmailer)
-    .pipe(plumber())
-    .pipe(dest(path.build.phpmailer))
-}
+
 function html() {
   return src(path.src.html, {})
     .pipe(plumber())
@@ -141,13 +133,7 @@ function js() {
 function images() {
   return src(path.src.images)
     .pipe(newer(path.build.images))
-    .pipe(
-      imagemin([
-        webp({
-          quality: 75,
-        }),
-      ])
-    )
+
     .pipe(
       rename({
         extname: '.webp',
@@ -156,14 +142,7 @@ function images() {
     .pipe(dest(path.build.images))
     .pipe(src(path.src.images))
     .pipe(newer(path.build.images))
-    .pipe(
-      imagemin({
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }],
-        interlaced: true,
-        optimizationLevel: 3, // 0 to 7
-      })
-    )
+
     .pipe(dest(path.build.images))
 }
 function favicon() {
@@ -237,12 +216,11 @@ function watchFiles() {
   gulp.watch([path.watch.images], images)
   gulp.watch([path.watch.json], json)
   gulp.watch([path.watch.audio], audio)
-  gulp.watch([path.watch.phpmailer], phpmailer)
 }
 let build = gulp.series(
   clean,
   fonts_otf,
-  gulp.parallel(html, css, js, json, audio, phpmailer, favicon, images),
+  gulp.parallel(html, css, js, json, audio, favicon, images),
   fonts,
   gulp.parallel(fontstyle, infofile)
 )
@@ -253,7 +231,6 @@ exports.css = css
 exports.js = js
 exports.json = json
 exports.audio = audio
-exports.phpmailer = phpmailer
 exports.favicon = favicon
 exports.infofile = infofile
 exports.fonts_otf = fonts_otf

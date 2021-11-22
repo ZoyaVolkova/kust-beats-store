@@ -1,8 +1,8 @@
 {
-  "name": "fls_start_gulp",
+  "name": "kust_beat_store",
   "version": "1.0.0",
-  "description": "Start template with Gulp",
-  "author": "FLS",
+  "description": "Kust Beat Store",
+  "author": "Kust",
   "private": true,
   "license": "GNU General Public License (GPL)",
   "devDependencies": {
@@ -14,7 +14,6 @@
     "gulp-file-include": "latest",
     "gulp-fonter": "latest",
     "gulp-group-css-media-queries": "latest",
-    "gulp-imagemin": "latest",
     "gulp-newer": "latest",
     "gulp-plumber": "latest",
     "gulp-rename": "latest",
@@ -24,13 +23,9 @@
     "gulp-uglify-es": "latest",
     "gulp-webp-html": "latest",
     "gulp-webpcss": "latest",
-    "imagemin-webp": "latest",
     "sass": "latest",
     "transform-runtime": "0.0.0",
     "webp-converter": "2.2.3"
   },
-  "dependencies": {
-    "@foobar404/wave": "^1.2.7",
-    "express": "^4.17.1"
-  }
+  "dependencies": {}
 }

@@ -658,7 +658,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (error === 0) {
       form.classList.remove('error_text')
       form.closest('.form').classList.add('_sending')
-      let response = await fetch('phpmailer/src/sendmail.php', {
+      let response = await fetch('', {
         method: 'POST',
         body: formData,
       })

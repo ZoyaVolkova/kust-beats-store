@@ -1,42 +1,34 @@
 # kust-beats-store
 
-<strong>Online beats store with cart, custom audio player and audio visualizer</strong>
-<p>https://zoyavolkova.github.io/kust-beats-store/kust-beats-store/index.html</p>
-<ul>
-<li>HTML</li>
-<li>SCSS</li>
-<li>Vanilla JS (including popups)</li>
-<li>GULP</li>
-<li>JSON</li>
-<li>Wave.js</li>
-<li>Web Audio API</li>
-<li>Swiper Slider</li>
-</ul>
+## Online beats store with cart, custom audio player and audio visualizer
+ https://zoyavolkova.github.io/kust-beats-store/kust-beats-store/index.html
+ - HTML
+ - SCSS
+ - Vanilla JS (including popups)
+ - GULP
+ - JSON
+ - Wave.js
+ - Web Audio API
+ - Swiper Slider
+ 
+## 
+![Untitled](readme/top.png)
 
-<img src="readme/top.png">
-<hr>
-<strong>Swiper Slider</strong>
-<hr>
-<img src="readme/middle.png">
-<img src="readme/bottom.png">
+## Swiper Slider
+![Untitled](readme/middle.png)
+## 
+![Untitled](readme/bottom.png)
 
-<hr>
-<strong>Adaptive design<strong>
-<hr>
-<div >
-<img src="readme/adaptive_top.png" width="300px">
-<img src="readme/adaptive_bottom.png" width="300px">
-  </div>
-<hr>
-<strong>Audio visualizer</strong>
-<hr>
-<img src="readme/visualizer.png">
-<hr>
-<strong>Cart</strong>
-<hr>
-<img src="readme/cart.png">
-<hr>
-<strong>Popups</strong>
-<hr>
-<img src="readme/modal_1.png">
-<img src="readme/modal_2.png">
+## Adaptive design
+![Untitled](readme/adaptive_top.png)
+![Untitled](readme/adaptive_bottom.png)
+
+## Audio visualizer
+![Untitled](readme/visualizer.png)
+
+## Cart 
+![Untitled](readme/cart.png)
+
+## Popups
+![Untitled](readme/modal_1.png)
+![Untitled](readme/modal_2.png)

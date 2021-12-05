@@ -25,7 +25,6 @@
 <hr>
 <div >
 <img src="readme/adaptive_top.png" width="300px">
-<img src="readme/adaptive_middle.png" width="300px">
 <img src="readme/adaptive_bottom.png" width="300px">
   </div>
 <hr>

@@ -1,7 +1,7 @@
 # kust-beats-store
 
 <strong>Online beats store with cart, custom audio player and audio visualizer</strong>
-
+<p>https://zoyavolkova.github.io/kust-beats-store/kust-beats-store/index.html</p>
 <ul>
 <li>HTML</li>
 <li>SCSS</li>
